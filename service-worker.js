@@ -14,6 +14,10 @@ const i18n = {
     'new_message': "Neue Nachricht",
     'new_chat': "Neuer Chat",
   },
+  'he': {
+    'new_message': "הודעה חדשה",
+    'new_chat': "חדש חדש",
+  },
   'en': {
     'new_message': "New message",
     'new_chat': "New chat",
