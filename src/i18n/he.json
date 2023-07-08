@@ -804,14 +804,14 @@
   },
   "new_message_prompt": {
     "translation": "הודעה חדשה",
-    "defaultMessage": "הודעה חדשה",
-    "description": "הכנס טקסט בשדה",
+    "defaultMessage": "New message",
+    "description": "Prompt in send message field",
     "missing": false,
     "obsolete": false
   },
   "new_password_placeholder": {
     "translation": "הכנס סיסמא חדשה",
-    "defaultMessage": "הכנס סיסמא חדשה",
+    "defaultMessage": "Enter new password",
     "description": "Placeholder for entering new password",
     "missing": false,
     "obsolete": false
@@ -825,14 +825,14 @@
   },
   "no_contacts": {
     "translation": "אין אנשי קשר :-(",
-    "defaultMessage": "אין אנשי קשר :-(",
+    "defaultMessage": "You have no contacts :-(",
     "description": "Shown in ContactsView when the user has no contacts",
     "missing": false,
     "obsolete": false
   },
   "numeric_confirmation_code_prompt": {
     "translation": "מספרים בלבד",
-    "defaultMessage": "מספרים בלבד",
+    "defaultMessage": "Numbers only",
     "description": "Prompt for numeric conformation code",
     "missing": false,
     "obsolete": false
@@ -846,7 +846,7 @@
   },
   "password_prompt": {
     "translation": "סיסמא",
-    "defaultMessage": "סיסמא",
+    "defaultMessage": "Password",
     "description": "Placeholder/prompt for entering password",
     "missing": false,
     "obsolete": false
