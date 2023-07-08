@@ -122,6 +122,10 @@ const messages = globSync(LANG_PATTERN)
   }, {});
 
 // Write minified translation files, one per language.
+const outputDir = path.dirname(OUTPUT_PATTERN);
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir);
+}
 for (let lang in messages) {
   fs.writeFileSync(printf(OUTPUT_PATTERN, lang), JSON.stringify(messages[lang]));
 }
