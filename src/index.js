@@ -55,6 +55,16 @@ const htmlLang = messageLoader[normalized] ? language : messageLoader[baseLangua
 // Set lang attribute of the HTML element: <html lang="XX">
 document.getElementsByTagName('html')[0].setAttribute('lang', htmlLang);
 
+// Clear caches in dev mode
+if (document.getElementsByTagName('html')[0].getAttribute('mode') === 'dev') {
+  console.log('Clearing caches')
+  window.caches.keys().then(names => {
+    names.forEach(name => {
+      window.caches.delete(name);
+    });
+  });
+}
+
 // Render the app.
 const root = createRoot(document.getElementById('mountPoint'));
 messageLoader[htmlLang]().then(messages =>
