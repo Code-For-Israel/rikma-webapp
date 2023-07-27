@@ -1,4 +1,7 @@
 .DS_Store
 node_modules
+umd/
 src/i18n/srci/
+src/i18n.min/
+css/base.min.css
 webapp.code-workspace.code-workspace

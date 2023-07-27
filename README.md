@@ -50,7 +50,7 @@ The app is currently available in the following languages:
  * Russian
  * Spanish
 
-More translations are welcome. See [instructions](https://github.com/tinode/chat/blob/devel/docs/translations.md#webapp).
+More translations are welcome. See [instructions](https://github.com/Code-For-Israel/rikma-chat-backend/blob/devel/docs/translations.md#webapp).
 
 
 ## Not done yet
