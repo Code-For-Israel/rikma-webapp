@@ -273,10 +273,6 @@ textarea.invalid {
   box-shadow: 0 1px 0 rgba(229, 115, 115, 0.25);
 }
 
-/* parent-div:has(input:focus:is([type="text"], [type="email"], [type="password"])) {
-  border-bottom: 1px solid #2196f3;
-} */
-
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -286,6 +282,8 @@ textarea {
   height: 2.5rem;
   transition: all 0.1s ease-in-out, height 0s;
   width: 100%;
+  border-bottom: 1px solid var(--mid-gray);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 input[type="text"]::placeholder,
@@ -302,16 +300,6 @@ textarea::placeholder {
   white-space: pre-line;
   position: relative;
   top: -7px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-textarea {
-  border-bottom: 1px solid var(--mid-gray);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 textarea:focus,
@@ -912,7 +900,7 @@ table.permission-editor td.checkbox {
 
 #side-caption-panel {
   background-color: var(--primary_1);
-  color: #ffffff;
+  color: white;
 }
 
 #side-caption-panel a {
