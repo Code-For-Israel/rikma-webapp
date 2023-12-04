@@ -1,12 +1,11 @@
 // A password reset form.
 import React from "react";
 import { FormattedMessage, defineMessages, injectIntl } from "react-intl";
-
+import InputWithIcon from "../widgets/input-with-icon.jsx";
 import PhoneEdit from "../widgets/phone-edit.jsx";
 import VisiblePassword from "../widgets/visible-password.jsx";
 
 import HashNavigation from "../lib/navigation.js";
-import InputWithIcon from "../widgets/input-with-icon.jsx";
 
 const messages = defineMessages({
   password_reset_email_sent: {
@@ -250,15 +249,18 @@ class PasswordResetView extends React.PureComponent {
             description="Prompt for numeric conformation code"
           >
             {(numbers_only) => (
-              <input
-                type="text"
-                id="enter-confirmation-code"
-                placeholder={numbers_only}
-                maxLength={10}
-                value={this.state.code}
-                onChange={this.handleCodeChange}
-                required
-              />
+              <InputWithIcon>
+                <input
+                  type="text"
+                  id="enter-confirmation-code"
+                  placeholder={numbers_only}
+                  maxLength={10}
+                  value={this.state.code}
+                  onChange={this.handleCodeChange}
+                  required
+                />
+                <i className={"material-icons small"}>lock</i>
+              </InputWithIcon>
             )}
           </FormattedMessage>
         </div>

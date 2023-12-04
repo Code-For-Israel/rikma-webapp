@@ -171,7 +171,7 @@ button.secondary:active:not([disabled]) {
 
 button.outline {
   background-color: transparent;
-  color: #2196f3; /* blue 500 */
+  color: var(--primary_1); /* blue 500 */
   border: 1px solid silver;
   box-shadow: none;
 }
@@ -227,6 +227,27 @@ input {
   }
 }
 
+.input-with-icon > input[type="text"],
+input[type="text"]:focus,
+input[type="text"].invalid,
+input[type="email"],
+input[type="email"]:focus,
+input[type="email"].invalid,
+input[type="password"],
+input[type="password"]:focus,
+input[type="password"].invalid,
+input[type="search"],
+input[type="search"]:focus,
+input[type="search"].invalid,
+input[type="tel"],
+input[type="tel"]:focus,
+input[type="tel"].invalid,
+textarea textarea:focus,
+textarea.invalid {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
 .input-with-icon:has(
     input[type="text"]:focus,
     input[type="email"]:focus,
@@ -264,14 +285,6 @@ input[type="tel"],
 textarea {
   height: 2.5rem;
   transition: all 0.1s ease-in-out, height 0s;
-  border: none !important;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-textarea {
   width: 100%;
 }
 
@@ -283,6 +296,43 @@ input[type="tel"]::placeholder,
 textarea::placeholder {
   color: var(--mid-gray);
   font-weight: lighter;
+}
+
+::-webkit-input-placeholder {
+  white-space: pre-line;
+  position: relative;
+  top: -7px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+textarea {
+  border-bottom: 1px solid var(--mid-gray);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus {
+  border-bottom: 1px solid var(--primary_2);
+  box-shadow: 0 1px 0 rgba(33, 150, 243, 0.25);
+  color: var(--gray);
+}
+
+textarea.invalid,
+input[type="text"].invalid,
+input[type="email"].invalid,
+input[type="password"].invalid,
+input[type="search"].invalid,
+input[type="tel"].invalid {
+  border-bottom: 1px solid #e57373;
+  box-shadow: 0 1px 0 rgba(229, 115, 115, 0.25);
 }
 
 textarea {
@@ -1536,6 +1586,7 @@ img.channel {
   box-shadow: 0px -2px 3px -1px rgba(0, 0, 0, 0.1); /* Faint shadow above panel */
   z-index: 2;
   display: flex;
+  padding: 10px;
   justify-content: center;
 }
 
@@ -1547,7 +1598,7 @@ img.channel {
 
 #send-message-panel {
   width: 356px;
-  border-radius: 53px;
+  border-radius: 40px;
 }
 
 #send-message-panel .material-icons {
@@ -2628,9 +2679,9 @@ ul.tabbar li.active > a {
 .chip-input > input[type="text"] {
   display: inline-block;
   width: auto;
-  border: none;
+  border: none !important;
   line-height: 1.8;
-  box-shadow: none;
+  box-shadow: none !important;
   min-width: 4rem;
   flex: 1 0 auto;
   height: 1.8rem;
